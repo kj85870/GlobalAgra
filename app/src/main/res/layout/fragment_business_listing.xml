@@ -1,14 +1,513 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".BusinessListing">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/upper"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="130dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/designupper"
+        android:orientation="vertical">
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/choose"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-black"/>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#ffffff">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/choose"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    card_view:cardBackgroundColor="#ffffff"
+                    card_view:cardCornerRadius="8dp"
+                    card_view:cardElevation="8dp"
+                    card_view:cardMaxElevation="10dp"
+                    card_view:cardPreventCornerOverlap="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+
+                            android:src="@drawable/categoryfirst" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Matrimony"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textAllCaps="true"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/realestate"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/choose"
+                    android:layout_centerVertical="true"
+                    card_view:cardBackgroundColor="#ffffff"
+                    card_view:cardCornerRadius="8dp"
+                    card_view:cardElevation="8dp"
+                    card_view:cardMaxElevation="10dp"
+                    card_view:cardPreventCornerOverlap="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/categorysecond" />
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Real Estate"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textAllCaps="true"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view_two"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/choose"
+                    android:layout_centerVertical="true"
+                    card_view:cardBackgroundColor="#ffffff"
+                    card_view:cardCornerRadius="8dp"
+                    card_view:cardElevation="8dp"
+                    card_view:cardMaxElevation="10dp"
+                    card_view:cardPreventCornerOverlap="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:padding="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/categoryfive" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Makeup and artist"
+                            android:padding="2dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textAllCaps="true"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/choose"
+                    android:layout_centerVertical="true"
+                    card_view:cardBackgroundColor="#ffffff"
+                    card_view:cardCornerRadius="8dp"
+                    card_view:cardElevation="8dp"
+                    card_view:cardMaxElevation="10dp"
+                    card_view:cardPreventCornerOverlap="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:padding="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/categoryfour" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="jewellery"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textAllCaps="true"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_below="@+id/choose"
+                    android:layout_centerVertical="true"
+                    card_view:cardBackgroundColor="#ffffff"
+                    card_view:cardCornerRadius="8dp"
+                    card_view:cardElevation="8dp"
+                    card_view:cardMaxElevation="10dp"
+                    card_view:cardPreventCornerOverlap="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:padding="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/categorysix" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Hotel and resort"
+                            android:padding="2dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textAllCaps="true"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/choose"
+                    android:layout_centerVertical="true"
+                    card_view:cardBackgroundColor="#ffffff"
+                    card_view:cardCornerRadius="8dp"
+                    android:layout_margin="5dp"
+                    card_view:cardElevation="8dp"
+                    card_view:cardMaxElevation="10dp"
+                    card_view:cardPreventCornerOverlap="true"
+                    >
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:padding="5dp"
+                            android:src="@drawable/categorythree" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="fashion"
+                            android:textAllCaps="true"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/choose"
+                    android:layout_centerVertical="true"
+                    card_view:cardBackgroundColor="#ffffff"
+                    card_view:cardCornerRadius="8dp"
+                    card_view:cardElevation="8dp"
+                    card_view:cardMaxElevation="10dp"
+                    card_view:cardPreventCornerOverlap="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:padding="5dp"
+                            android:src="@drawable/categorysev" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="caterer"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textAllCaps="true"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/choose"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    card_view:cardBackgroundColor="#ffffff"
+                    card_view:cardCornerRadius="8dp"
+                    card_view:cardElevation="8dp"
+                    card_view:cardMaxElevation="10dp"
+                    card_view:cardPreventCornerOverlap="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:padding="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/cateegt" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="banquet"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textAllCaps="true"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </HorizontalScrollView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/choose"
+            android:layout_centerVertical="true"
+            card_view:cardBackgroundColor="#ffffff"
+            card_view:cardCornerRadius="8dp"
+            android:layout_margin="5dp"
+            card_view:cardElevation="8dp"
+            card_view:cardMaxElevation="10dp"
+            card_view:cardPreventCornerOverlap="true"
+            >
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="130dp"
+                    android:layout_height="150dp"
+                    android:padding="5dp"
+                    android:src="@drawable/eliteclub" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="About Elite Club
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,
+
+Price : Rs.1300
+
+"
+                    />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/choose"
+            android:layout_centerVertical="true"
+            card_view:cardBackgroundColor="#ffffff"
+            card_view:cardCornerRadius="8dp"
+            android:layout_margin="5dp"
+            card_view:cardElevation="8dp"
+            card_view:cardMaxElevation="10dp"
+            card_view:cardPreventCornerOverlap="true"
+            >
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="130dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/cater" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="pankaj catering service
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up
+
+Price : Rs.1200
+
+
+"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/choose"
+                android:layout_centerVertical="true"
+                card_view:cardBackgroundColor="#ffffff"
+                card_view:cardCornerRadius="8dp"
+                android:layout_margin="5dp"
+                card_view:cardElevation="8dp"
+                card_view:cardMaxElevation="10dp"
+                card_view:cardPreventCornerOverlap="true"
+                >
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:padding="5dp"
+                        android:src="@drawable/eliteclub" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="pankaj painter
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+
+Price : Rs.1200
+
+
+"
+                        />
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/choose"
+                android:layout_centerVertical="true"
+                card_view:cardBackgroundColor="#ffffff"
+                card_view:cardCornerRadius="8dp"
+                android:layout_margin="5dp"
+                card_view:cardElevation="8dp"
+                card_view:cardMaxElevation="10dp"
+                card_view:cardPreventCornerOverlap="true"
+                >
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:padding="5dp"
+                        android:src="@drawable/eliteclub" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="Butola hotel
+Vivamus aliquam ac ipsum quis laoreet. Donec tempus sem lectus, in feugiat est viverra in. Donec quis porta magna. Praesent rhoncus finibus quam, a molestie nibh congue vitae. Quisque laoreet pellentesque lorem, non vulputate urna finibus et. Vestibulum
+
+Price : Rs.14400
+
+
+"
+                        />
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
